@@ -59,6 +59,6 @@ if [[ $var == "challenge" ]]; then printf "\e[1;93m\n[!] Challenge required\n" ;
 fi
 
 }
-}
+
 
 login
