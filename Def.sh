@@ -83,10 +83,10 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slep = shuf -i 50-60 -n 1
+slep=$(shuf -i 50-60 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slep secs...\e[0m\n"
-sleep slep
+sleep $slep
 
 }
 
