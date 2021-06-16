@@ -1,4 +1,4 @@
-C#!/bin/bash
+C #!/bin/bash
 # Inshackle v1.0
 # recoded by: CYBER KALLAN
 # github.com/cyberkallan/inshackle-bot
@@ -20,11 +20,28 @@ ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 
 login()
 {
-  if [[ $user == ""]]; then
+  if [[ $user == "" ]]; then
   printf "LOGIN"
   read -p $'Enter UserName: ' user
   fi
   
+if [[ -e cookie.$user ]]; then
+
+printf "\e[1;31m[\e[0m\e[1;77m*\e[0m\e[1;31m]\e[0m\e[1;93m Cookies found for user\e[0m\e[1;77m %s\e[0m\n" $user
+
+default_use_cookie="Y"
+
+read -p $'\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Use it?\e[0m\e[1;77m [Y/n]\e[0m ' use_cookie
+
+use_cookie="${use_cookie:-${default_use_cookie}}"
+
+if [[ $use_cookie == *'Y'* || $use_cookie == *'y'* ]]; then
+printf "\e[1;31m[\e[0m\e[1;77m*\e[0m\e[1;31m]\e[0m\e[1;93m Using saved credentials\e[0m\n"
+else
+rm -rf cookie.$user
+login_user
+fi
+
   else
    read -s -p $'Enter Password: ' pass
     data='{"phone_id":"'$phone'", "_csrftoken":"'$var2'", "username":"'$user'", "guid":"'$guid'", "device_id":"'$device'", "password":"'$pass'", "login_attempt_count":"0"}'
