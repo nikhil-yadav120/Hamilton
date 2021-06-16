@@ -21,7 +21,7 @@ ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 login()
 {
   if [[ $user == "" ]]; then
-  printf "LOGIN"
+  printf "LOGIN \n"
   read -p $'Enter UserName: ' user
   fi
   
@@ -59,6 +59,36 @@ if [[ $var == "challenge" ]]; then printf "\e[1;93m\n[!] Challenge required\n" ;
 fi
 
 }
+followers()
+{
+printf "Working Well"
+sleep 5
+username_id=$(curl -L -s 'https://www.instagram.com/'$user'' > getid && grep -o  'profilePage_[0-9]*.' getid | cut -d "_" -f2 | tr -d '"')
+instagram="25025320"
+if [[ ! -e celeb_id ]]; then
+printf "%s\n" $instagram > celeb_id
+fi
+while [[ true ]]; do
+data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$celeb_id'", "_csrftoken":"'$var2'"}'
+hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to follow celebgram %s ..." $celeb_id
 
+check_follow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/create/$celeb_id/" | grep -o '"following": true')
+
+if [[ $check_follow == "a" ]]; then
+printf "\n\e[1;93m [!] Error\n"
+exit 1
+else
+printf "\e[1;92mOK\e[0m\n"
+fi
+
+sleep 3
+
+done
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
+sleep 50
+
+}
 
 login
+followers
