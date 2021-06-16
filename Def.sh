@@ -68,7 +68,7 @@ instagram="25025320"
 if [[ ! -e celeb_id ]]; then
 printf "%s\n" $instagram > celeb_id
 fi
-while [[ true ]]; do
+ # while [[ true ]]; do
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$celeb_id'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to follow celebgram %s ..." $celeb_id
@@ -84,7 +84,7 @@ fi
 
 sleep 3
 
-done
+ # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
 sleep 50
 
