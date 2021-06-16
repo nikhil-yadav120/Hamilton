@@ -1,4 +1,4 @@
-C #!/bin/bash
+#!/bin/bash
 # Inshackle v1.0
 # recoded by: CYBER KALLAN
 # github.com/cyberkallan/inshackle-bot
@@ -39,7 +39,7 @@ if [[ $use_cookie == *'Y'* || $use_cookie == *'y'* ]]; then
 printf "\e[1;31m[\e[0m\e[1;77m*\e[0m\e[1;31m]\e[0m\e[1;93m Using saved credentials\e[0m\n"
 else
 rm -rf cookie.$user
-login_user
+login
 fi
 
   else
