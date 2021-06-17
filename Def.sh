@@ -1,9 +1,5 @@
-#!/bin/bash
-# Inshackle v1.0
-# recoded by: CYBER KALLAN
-# github.com/cyberkallan/inshackle-bot
-# If you use any part from this code, give me the credits, please, read the License
 
+# Nikhil Yadav
 
 string4=$(openssl rand -hex 32 | cut -c 1-4)
 string8=$(openssl rand -hex 32  | cut -c 1-8)
