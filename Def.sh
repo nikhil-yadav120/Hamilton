@@ -798,7 +798,7 @@ fi
 
 sleep 3
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
-sleep $(shuf -i 50-65 -n 1)
+sleep $(shuf -i 1-13 -n 1)
 
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$camila'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
