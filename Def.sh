@@ -86,6 +86,9 @@ ladygaga="184692323"
 taylorswift="11830955"
 justin="6860189"
 natgeo="787132"
+virat="2094200507"
+zendaya="9777455"
+apple="5821462185"
 
 # if [[ ! -e celeb_id ]]; then
 # printf "%s\n" $instagram > celeb_id
@@ -452,6 +455,7 @@ slepbui=$(shuf -i 1-12 -n 1)
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbui secs...\e[0m\n"
 sleep $slepbui
 
+
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$camila'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to follow celebgram Camila ..." 
@@ -466,11 +470,90 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepbn=$(shuf -i 50-68 -n 1)
+slepbn=$(shuf -i 1-12 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbn secs...\e[0m\n"
 sleep $slepbn
 
+data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$virat'", "_csrftoken":"'$var2'"}'
+hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to follow celebgram virat ..." 
+
+check_follow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/create/$virat/" | grep -o '"following": true')
+
+if [[ $check_follow == "a" ]]; then
+printf "\n\e[1;93m [!] Error\n"
+exit 1
+else
+printf "\e[1;92mOK\e[0m\n"
+fi
+
+sleep 3
+slepbuio=$(shuf -i 1-12 -n 1)
+ # done
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbuio secs...\e[0m\n"
+sleep $slepbuio
+
+data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$dualipa'", "_csrftoken":"'$var2'"}'
+hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to follow celebgram dualipa ..." 
+
+check_follow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/create/$dualipa/" | grep -o '"following": true')
+
+if [[ $check_follow == "a" ]]; then
+printf "\n\e[1;93m [!] Error\n"
+exit 1
+else
+printf "\e[1;92mOK\e[0m\n"
+fi
+
+sleep 3
+slepbuio=$(shuf -i 1-12 -n 1)
+ # done
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbuio secs...\e[0m\n"
+sleep $slepbuio
+
+data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$zendaya'", "_csrftoken":"'$var2'"}'
+hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to follow celebgram Zendaya ..." 
+
+check_follow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/create/$zendaya/" | grep -o '"following": true')
+
+if [[ $check_follow == "a" ]]; then
+printf "\n\e[1;93m [!] Error\n"
+exit 1
+else
+printf "\e[1;92mOK\e[0m\n"
+fi
+
+sleep 3
+slepbuiop=$(shuf -i 1-12 -n 1)
+ # done
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbuiop secs...\e[0m\n"
+sleep $slepbuiop
+
+data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$apple'", "_csrftoken":"'$var2'"}'
+hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to follow celebgram Apple  ..." 
+
+check_follow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/create/$apple/" | grep -o '"following": true')
+
+if [[ $check_follow == "a" ]]; then
+printf "\n\e[1;93m [!] Error\n"
+exit 1
+else
+printf "\e[1;92mOK\e[0m\n"
+fi
+
+sleep 3
+slepbuiopo=$(shuf -i 50-60 -n 1)
+ # done
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbuiopo secs...\e[0m\n"
+sleep $slepbuiopo
+
+#
+#
+#
 #
 #
 #
@@ -804,6 +887,70 @@ data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$camila'", "_csrf
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to unfollow celebgram Camila..." 
 check_unfollow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/destroy/$camila/" | grep -o '"following": false' ) 
+
+if [[ $check_unfollow == "a" ]]; then
+printf "\n\e[1;93m [!] Error, stoping to prevent blocking\n"
+exit 1
+else
+printf "\e[1;92mOK\e[0m\n"
+fi
+
+sleep 3
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
+sleep $(shuf -i 1-13 -n 1)
+
+data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$virat'", "_csrftoken":"'$var2'"}'
+hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to unfollow celebgram virat ..." 
+check_unfollow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/destroy/$virat/" | grep -o '"following": false' ) 
+
+if [[ $check_unfollow == "a" ]]; then
+printf "\n\e[1;93m [!] Error, stoping to prevent blocking\n"
+exit 1
+else
+printf "\e[1;92mOK\e[0m\n"
+fi
+
+sleep 3
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
+sleep $(shuf -i 1-13 -n 1)
+
+data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$dualipa'", "_csrftoken":"'$var2'"}'
+hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to unfollow celebgram  dualipa..." 
+check_unfollow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/destroy/$dualipa/" | grep -o '"following": false' ) 
+
+if [[ $check_unfollow == "a" ]]; then
+printf "\n\e[1;93m [!] Error, stoping to prevent blocking\n"
+exit 1
+else
+printf "\e[1;92mOK\e[0m\n"
+fi
+
+sleep 3
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
+sleep $(shuf -i 1-13 -n 1)
+
+data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$zendaya'", "_csrftoken":"'$var2'"}'
+hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to unfollow celebgram zendaya ..." 
+check_unfollow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/destroy/$zendaya/" | grep -o '"following": false' ) 
+
+if [[ $check_unfollow == "a" ]]; then
+printf "\n\e[1;93m [!] Error, stoping to prevent blocking\n"
+exit 1
+else
+printf "\e[1;92mOK\e[0m\n"
+fi
+
+sleep 3
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
+sleep $(shuf -i 1-13 -n 1)
+
+data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$apple'", "_csrftoken":"'$var2'"}'
+hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
+printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;93m Trying to unfollow celebgram apple ..." 
+check_unfollow=$(curl -s -L -b cookie.$user -d "ig_sig_key_version=4&signed_body=$hmac.$data" -s --user-agent 'User-Agent: "Instagram 10.26.0 Android (18/4.3; 320dpi; 720x1280; Xiaomi; HM 1SW; armani; qcom; en_US)"' -w "\n%{http_code}\n" -H "$header" "https://i.instagram.com/api/v1/friendships/destroy/$apple/" | grep -o '"following": false' ) 
 
 if [[ $check_unfollow == "a" ]]; then
 printf "\n\e[1;93m [!] Error, stoping to prevent blocking\n"
