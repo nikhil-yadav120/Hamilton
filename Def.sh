@@ -314,7 +314,7 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepb=$(shuf -i 50-65 -n 1)
+slepb=$(shuf -i 1-12 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepb secs...\e[0m\n"
 sleep $slepb
@@ -333,7 +333,7 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepv=$(shuf -i 50-65 -n 1)
+slepv=$(shuf -i 1-12 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepv secs...\e[0m\n"
 sleep $slepv
@@ -352,7 +352,7 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepx=$(shuf -i 50-65 -n 1)
+slepx=$(shuf -i 1-12 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepx secs...\e[0m\n"
 sleep $slepx
@@ -371,7 +371,7 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepxy=$(shuf -i 50-65 -n 1)
+slepxy=$(shuf -i 1-12 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepxy secs...\e[0m\n"
 sleep $slepxy
@@ -390,7 +390,7 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepv=$(shuf -i 50-65 -n 1)
+slepv=$(shuf -i 1-12 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbv secs...\e[0m\n"
 sleep $slepbv
@@ -409,7 +409,7 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepbxc=$(shuf -i 50-65 -n 1)
+slepbxc=$(shuf -i 1-12 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbxc secs...\e[0m\n"
 sleep $slepbxc
@@ -428,7 +428,7 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepbgh=$(shuf -i 50-65 -n 1)
+slepbgh=$(shuf -i 1-12 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbgh secs...\e[0m\n"
 sleep $slepbgh
@@ -447,7 +447,7 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepbui=$(shuf -i 50-65 -n 1)
+slepbui=$(shuf -i 1-12 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbui secs...\e[0m\n"
 sleep $slepbui
@@ -466,7 +466,7 @@ printf "\e[1;92mOK\e[0m\n"
 fi
 
 sleep 3
-slepbn=$(shuf -i 50-65 -n 1)
+slepbn=$(shuf -i 50-68 -n 1)
  # done
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping $slepbn secs...\e[0m\n"
 sleep $slepbn
@@ -686,7 +686,7 @@ fi
 
 sleep 3
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
-sleep $(shuf -i 50-65 -n 1)
+sleep $(shuf -i 1-13 -n 1)
 
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$natgeo'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
@@ -702,7 +702,7 @@ fi
 
 sleep 3
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
-sleep $(shuf -i 50-65 -n 1)
+sleep $(shuf -i 1-13 -n 1)
 
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$justin'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
@@ -718,7 +718,7 @@ fi
 
 sleep 3
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
-sleep $(shuf -i 50-65 -n 1)
+sleep $(shuf -i 1-13 -n 1)
 
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$katyperry'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
@@ -734,7 +734,7 @@ fi
 
 sleep 3
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
-sleep $(shuf -i 50-65 -n 1)
+sleep $(shuf -i 1-13 -n 1)
 
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$taylorswift'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
@@ -750,7 +750,7 @@ fi
 
 sleep 3
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
-sleep $(shuf -i 50-65 -n 1)
+sleep $(shuf -i 1-13 -n 1)
 
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$charlieputh'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
@@ -766,7 +766,7 @@ fi
 
 sleep 3
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
-sleep $(shuf -i 50-65 -n 1)
+sleep $(shuf -i 1-13 -n 1)
 
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$lelepons'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
@@ -782,7 +782,7 @@ fi
 
 sleep 3
 printf "\e[1;31m[\e[0m\e[1;77m+\e[0m\e[1;31m]\e[0m\e[1;77m Sleeping 60 secs...\e[0m\n"
-sleep $(shuf -i 50-65 -n 1)
+sleep $(shuf -i 1-13 -n 1)
 
 data='{"_uuid":"'$guid'", "_uid":"'$username_id'", "user_id":"'$ladygaga'", "_csrftoken":"'$var2'"}'
 hmac=$(echo -n "$data" | openssl dgst -sha256 -hmac "${ig_sig}" | cut -d " " -f2)
